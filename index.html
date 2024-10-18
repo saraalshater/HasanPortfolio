@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Alexandria&display=swap" rel="stylesheet"> <!-- English and Arabic Fonts -->
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("YOUR_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS user ID
+            emailjs.init({
+        publicKey: "niSrtDq-NK0ihoZKd",
+      }); 
         })();
     </script>
 </head>
@@ -325,7 +327,7 @@
                 <input type="email" id="email" name="email" placeholder="الإيميل" required>
                 <input type="text" id="subject" name="subject" placeholder="موضوع الرسالة" required>
                 <textarea id="message" name="message" rows="5" placeholder="لدي فكرة لأغنية وأرغب في العمل معك لتسجيلها ...." required></textarea>
-                <a class="btn primary-btn" type="submit">إرسال الإيميل</a>
+                <button class="btn primary-btn" type="submit">إرسال الإيميل</button>
             </form>
         </div>
 
@@ -422,14 +424,13 @@ function showProject(id) {
 //email
 document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
-
             // Get the form values
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
             // Send the email via EmailJS
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            emailjs.send("service_8lkjs4e", "template_0dx9bs4", {
                 email: email,
                 subject: subject,
                 message: message
