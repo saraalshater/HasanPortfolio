@@ -27,8 +27,8 @@ body {
     font-size: 2.46vw; /* Equivalent to approximately 32px */
     line-height: calc(2.46vw * 1.6); /* 1.6 times the font size for line height */
     font-weight: 600; /* Semibold */
-
-    direction: rtl; /* Set text direction to right-to-left */
+    direction: ltr; /* Set text direction to right-to-left */
+   text-align: left;
 }
 
 .arabic h2 {
@@ -36,8 +36,8 @@ body {
     font-size: 1.85vw; /* Equivalent to approximately 24px */
     line-height: calc(1.85vw * 1.6); /* Responsive line height */
     font-weight: 600; /* Semibold */
-   
-    direction: rtl; /* Set text direction to right-to-left */
+    text-align: left;
+    direction: ltr; /* Set text direction to right-to-left */
 }
 
 .arabic h3 {
@@ -45,8 +45,8 @@ body {
     font-size: 1.54vw; /* Equivalent to approximately 20px */
     line-height: calc(1.54vw * 1.6); /* Responsive line height */
     font-weight: 600; /* Semibold */
-
-    direction: rtl; /* Set text direction to right-to-left */
+    text-align: left;
+    direction: ltr; /* Set text direction to right-to-left */
 }
 
 .arabic h4 {
@@ -54,8 +54,8 @@ body {
     font-size: 1.39vw; /* Equivalent to approximately 18px */
     line-height: calc(1.39vw * 1.6); /* Responsive line height */
     font-weight: 600; /* Semibold */
-   
-    direction: rtl; /* Set text direction to right-to-left */
+    text-align: left;
+    direction: ltr; /* Set text direction to right-to-left */
 }
 
 
@@ -65,7 +65,7 @@ body {
     line-height: calc(1.23vw * 1.6); /* Responsive line height */
     font-weight: 300; /* Light */
   
-    direction: rtl; /* Set text direction to right-to-left */
+    direction: ltr; /* Set text direction to right-to-left */
 }
 
 
@@ -115,7 +115,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; /* Align items to center */
-    direction: rtl; /* Set text direction to right-to-left */
+    direction: ltr; /* Set text direction to right-to-left */
     z-index: 4;
     padding: 0rem 1rem;
 }
@@ -168,7 +168,6 @@ body {
     background-repeat: no-repeat; /* Prevent repeating */
     position: relative;
     z-index: 0; /* Ensure it's behind other content */
-
 }
 
 .main-section {
@@ -176,6 +175,8 @@ body {
     flex-direction: row;
     gap: 32px;
     margin-top: 16%;
+
+text-align: left;
 }
 
 .image-container {
@@ -264,7 +265,7 @@ body {
     background-color: #F9FEF1;
     padding: 5rem 8rem;
     position: relative;
-    background-image: url('assets/images/10yrs.png'); /* Add background image here */
+    background-image: url('assets/images/10yrseng.png'); /* Add background image here */
     background-size: cover; /* Ensure it covers the whole container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
@@ -275,7 +276,7 @@ body {
 .second-header-container{
     display: flex;
     flex-direction: row;
-    direction: rtl;
+    direction: ltr;
     gap:16px;
     margin-bottom: 8vh;
    
@@ -283,13 +284,13 @@ body {
 .stats-container{
     display: flex;
     flex-direction: row;
-    direction: rtl;
+    direction: ltr;
     gap:4px;
 }
 
 .stats-item{
    width: 25%;
-    border-right:solid 1px #55CE5B;
+    border-left:solid 1px #55CE5B;
     padding: 8px;
 }
 
@@ -328,14 +329,13 @@ font-size: 14px;
 /*testimonal*/
 .testimonial-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+   flex-direction: row-reverse;
     background-color: white;
     padding: 4rem 8rem;
     gap: 32px;
 
     position: relative;
-    background-image: url('assets/images/two-comma.png'); /* Add background image here */
+    background-image: url('assets/images/two-commaeng.png'); /* Add background image here */
     background-size: cover; /* Ensure it covers the whole container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
@@ -418,14 +418,14 @@ font-size: 14px;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    direction: rtl;
+  
     border-bottom: solid 1px #D8E8C0 ;
 }
 
 .latest-projects {
     padding-top: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 32px;
     background-color: #F9FEF1;
     position: relative; /* Ensure the parent container is positioned */
@@ -460,7 +460,7 @@ font-size: 14px;
   padding: 1rem 1rem;
     background-color: #fff;
     border-bottom: 1px solid #D8E8C0;
-    direction: rtl;
+  
     align-items: center;
     border-radius: 8px 8px 0px 0px;
   }
@@ -531,7 +531,10 @@ font-size: 14px;
         padding: 3rem 2rem;
       
     }
-    
+    .latest-projects-container{
+        background-color: #F9FEF1;
+        padding: 2rem 0rem;
+    }
     .latest-projects {
         
         padding: 1rem 2rem;
@@ -550,7 +553,7 @@ font-size: 14px;
 
     .latest-projects-container{
       
-        padding: 2rem 0rem;
+        padding: 2rem 2rem;
     }
 
     .latest-projects-title{
@@ -668,10 +671,11 @@ font-size: 14px;
 
 
 .journey-header {
-   direction: rtl;
-   text-align: right;
+
+  
     margin-bottom: 3rem;
-   
+    direction: ltr;
+    text-align: left;
     
 }
 
@@ -681,11 +685,10 @@ font-size: 14px;
 }
 
 
-
 .journey-content {
     display: flex;
     flex-direction: row;
-    direction: rtl;
+ text-align: left;
     gap: 32px;
 }
 
@@ -718,9 +721,7 @@ font-size: 14px;
 }
 
 /* Button */
-.journey-footer{
-    direction: rtl;
-}
+
 
 .journey-section a{
     
@@ -798,7 +799,6 @@ width: 25%;
     border: 2px solid #55CE5B;
     height: 40px;
     line-height: 40px;
-    
 }
 
 .secondary-btn:hover {
@@ -814,9 +814,10 @@ width: 25%;
     color: white;
     height: 32px;
     border: none;
-   padding-top: 5px;
-   
     align-items: center;
+    padding-top: 5px;
+   
+ 
 }
 
 
